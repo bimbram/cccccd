@@ -1,0 +1,148 @@
+The Way of Emacs
+----------------
+Modern computing era begin in the 1960s. Richard Stallman write emacs as a set of macros on top another editor, called TECO, back in 1976.
+
+Since the founding, there have been many competing implementations of Emacs but today you're only likely to encounter XEmacs and GNU Emacs.
+
+The book will only concern itself with GNU Emacs. 
+
+Once upon a time, XEmacs was the more advanced and feature rich editor, but this is no longer the case: from Emacs 22 on wards GNU Emacs is the best Emacs out there.
+
+To almost everyone the word Emacs will refer to the GNU Emacs.
+
+Emacs was ahead of the editor-IDE curve for many decades and thus had to invent its own terminology for things. 
+
+It is Emacs extensibility that attracts some to and repels others from Emacs
+
+Guiding Philosophy
+-----------------
+Emacs pulls you in. Once you start Emacs for editing, you realize that using emacs for IRC, email, database access, command-line shells, compiling your code or surfing the Internet is just as easy as editing text - and you get to keep your key bindings, theme and all the power of Emacs and elisp to configure or alter the behavior of everything.
+
+Lisp is a perfect abstraction for a very advanced tool like Emacs.
+
+If you hate the idea of tweaking anything and want everything out of the box, you have two options left:
+(1) use a starter kit: 
+-There are many starter kits that come equipped with additional package
+-They can be a good way to start out but with the caveat that you don't know where Emacs end and the starter kits' added functionality begins
+-Two recommended starter kits:
+(a) Steve Purcell's .emacs.d: https://github.com/purcell/emacs.d
+(b) Bozhidar Batzov's prelude: https://github.com/purcell/emacs.d
+(2) use the defaults:
+-The maintainers are surprisingly conservative about changing the defaults for fear of upsetting the old guard (who, of all people, should know how to configure Emacs)
+-Rather lacking out of the box
+
+Lisp?
+-----
+Emacs is powered by its own Lisp implementation called Emacs Lisp or just elisp. Many are put off or intimidated by this esoteric language; that's a shame, because it's a practical and fun way to learn Lisp in an editor built up around the idea of Lisp. 
+
+Every part of Emacs can be inspected, evaluated or modified because the editor is approximately 95 percent elisp and 5 percent C code. 
+
+Emacs is a practical way to learn macrps: that code and data are interchangeable and maleable;
+
+What makes Lisp such a fantastic language is that source code and data structures are intrinsically one and the same: the Lisp source code you read as a human is almost indentical to how the code is manipulated as a data structure by Lisp - the distinction between the questions "What is data?" and "What is code?" are nil.
+
+Emacs as an Operating System
+----------------------------
+When you write elisp you are not just writing snippets of code run in a sandbox, isolated from everything - you are altering a living system; an operating system running on an operating system.
+
+Extensibility
+-------------
+Remote file editing: Emac's TRAMP (Transparent Remote (file) Access, Multiple Protocol) lets you edit remote files using variety of network protocols, including SSH, FTP< rsync, and more, as though the files were local.
+
+Shell access: Emacs has a built-in ANSI-capable terminal emulator; 
+
+ORG mode: A to-do, agenda, project planner, literate programming, note-taking (and more!) appication. It is widely considered the best text-based organizer ever - a feat only surpassed by the fact that people siwth to Emacs just to use it.
+
+Important Conventions
+---------------------
+
+The Buffer
+----------
+Most text editor and IDES are file based: they display text from a file, and they save the text to a file. That's it.
+
+In Emacs, all files are buffers, but not all buffers are files. If you want a throw-away area to temporarily store snippets from a log file, or manipulate text, or whatever your reason - you just create and name a new buffer. Emacs won't hassle you for a filename. The buffer will exist in Emacs and only Emacs. You have to explicitly save it to a file on disk to make it persist.
+
+Emacs uses these buffers for more than just editing text. It can also act like an I/O device and talk to another process, such as shell like bash or even python.
+
+Almost all of Emacs's own commands act on buffers.
+
+In Emacs, the buffer is the data structure. This is an extremely powerful concept beause the very same commands you use to move around and edit in Emacs are almost always the same one you use behind the scene in elisp. 
+
+So once you memorize Emacs's own user commands, you can use them in a simple function call to mimic what you'd do by hand.
+
+The Window and the Frame
+------------------------
+Window is a tiled portion of the frame.
+
+Each frame can have one or more windows, and each window can have exactly one buffer.
+
+A buffer must be viewed in a window in order to be displayed to the user, and for the window to be visible to hte user it must be in a frame.
+
+In Emacs, you are free to create as many frames as you like, and in each frame you're free to split and tile that frame into multiple windows.
+
+Modeline, Echo Area, and Minibuffer
+-----------------------------------
+Emacs uses the modeline to communicate facts about Emacs and the buffer you're in.
+
+Most editors have a similar concept known as a status bar.
+
+All sorts of optional information can be displayed in the modeline: laptop batery power, the current function or class you're in, what source control revision or branch you're using, and much more.
+
+The minibuffer is directly below the modeline and it is where errors and general information are shown.
+
+The Point and Mark
+------------------
+The point is just another word for the caret or cursor. The Emacs documentation is rather inconsistent in its use of point or cursor; you will see both. 
+
+The point is often represnted as -!- in Emacs's doc strings and documentation. 
+
+In the book 'current buffer' means whichever buffer has the point. A buffer that has the point is the current buffer.
+
+The point has more utility than just acting as a visual marker for where characters you type end up on the screen. 
+
+Emavs has supported visual regions for a very long time now, called the transient mark mode (TMM). It is enabled by default. Surprisingly, there's some value in not using TMM at all.
+
+The mark serves as a boundary for the region and also a beacon you can use to return from other parts in the buffer. The mark is typically invisible.
+
+Killing, Yanking and CUA
+------------------------
+In Emacs, the key and the terminology for cut, copy, and paste differ greatly.
+
+Killing is cutting; yanking is pasting; and copying is awkwardly known as saving to the kill ring (or just copy, informally).
+
+The reasons are historical. Most of the keys and terminology stem from IBM's Common User Access (CUA) and Apple. 
+
+.emacs.d, init.el, and .emacs
+------------------------------
+Historically, Emacs's settings were kept in a file called .emacs, but most keep their customization in ~/.emacs.d/init.el on Linux and %HOME%\iniy.el on Windows. Since Emacs now writes several more files to your file system, they are kept in a directory called .emacs.d to avoid cluttering your home directory.
+
+Major Modes and Minor Modes
+---------------------------
+Major modes in Emacs control how buffers behave. Each buffer will have a major mode. The major mode may be basic and offer no font locking (syntax highlighting) and no specific functionality, or it may be the complete opposite and introduce font locking, an advanced indentation engine, and specialized commands.
+
+Font locking is the correct term for syntax highlighting in Emacs, and in turn is made up of faces of properties (color, font, text size, and so on) that the font locking engine use the pretty-print the text
+
+You are free to change a buffer's major mode at any time by typing the command to for another one. 
+x
+In addition to Emacs's register of file extentions and associated major modes, there is another system for files with ambiguous (or no) file extensions at all: Emacs will scan the first portion of the file and try to infer the major mode from that. Rarely, Emacs will get it wrong and you will need to change it.
+
+Each buffer can have just one major mode.
+
+Minor mode are typically optional add-ons that you enable for some (or all) of your buffers. One example is flyspell mode, a minor mode that spell checks text as you write.
+
+The major mode is always displayed in the modeline. Some minor modes are also displayed in the modeline, but usually only the ones that alter the buffer or how you interact with in some ways.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
