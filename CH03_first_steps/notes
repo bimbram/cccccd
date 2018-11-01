@@ -213,9 +213,86 @@ If you know the name of the package, you can use the shortcut M-x package-instal
 
 Color Themes
 ------------
-If you dislike the default color scheme in Emacs you can use a color theme. Type M-x customize-themes
+If you dislike the default color scheme in Emacs you can use a color theme. Type 'M-x customize-themes' to see a list of your installed color themes. 
+
+To install a theme with the package manager, open the package manager (M-x package-list-packages) and go look for themes; most will have the suffix -theme, and they act and install like normal packages
+
+You can override specific coors you don't like by using regular Customize interface described in The Customize Interface. Changes made in the Customize interface take precedence over the themes.
+
+Getting Help
+--------------
+Emacs is a sophisticated self-documenting editor. Every faces of Emacs is searchable or describable. Learning how to do this is absolutelty essential to mastering Emacs. 
+
+Emacs knows best. Your Emacs configuration will differ from other people's Emacs. Asking question on the Internet will only give you general answers. If you rebind keys, only your Emacs knows what the keys are.
+
+You will discover more of Emacs. I have stumbled upon more cool features than I can count simply by exploring - maybe a time saving ommand hidden away in major mode, or a variable that changes the behavior of a command I use frequently.
+
+It will help you solve problems. I help people with Emacs questions all the time, but I don't know everything - what I do know is where to look and how to read the documentation.
+
+It gives you confidence. Not knowing how to do something in Emacs is normal but also confusing. But being bale to say that 'oh I don't know how to do this but I do know where I can look for help" - your confidence in emacs will go up in step with your knowledge.
+
+The Info Manual
+---------------
+Emacs's own manuals (and all manuals in the GNU ecosystem) are written in TeXinfo. If you have ever used the command line tool info, you will have interacted with the TeXinfo hhypertext viewer.
+
+Emac's info manual contains more than just topics relating to Emacs.
+
+To access Emacs's info reader type M-x info or press C-h i. Use this table of keyboards shortcut to navigate:
+
+Key	  	  Purpose
+[ and ]		  Previous / next node
+l and r		  Go back / forward in history
+n and p		  Previous / next sibling node
+u     		  Goes up one level to a parent node
+SPC		  Scroll one screen at a time
+TAB		  Cycles through cross-references and links
+RET		  Opens the active link
+m		  Prompts for menu item name and opens it
+q		  Closes the info browser
+
+Most info manuals are also published in HTML versions online, so why use Emac's own reader? For one, you can use Emacs's own reader? For one you can use Emacs's universal bookmark system.
+
+You can bookmark almost everything in Emacs: info pages, files, directories, and more.
+
+Apropos
+-------
+Emacs has an extensive apropos system that works in much the same way as apropos does on the command line. The apropos system is especially useful if you're not entirely sure what you're loking for. There is a variety of niche commands that only search particular aspects of Emacs's self-documenting internals.
+
+The most common one, bound to C-h a, is M-x apropos-command. 
+
+Apropos sort results by relevancy. To enable this, add:
+startcode
+
+(setq apropos-sort-by-scores t)
+
+endcode
+
+to your init file
+
+There's wide range of apropos commands you can use to query Emacs. 'apropos-command' is perhaps the most useful to a beginner. And it'll let you serach by pattern, which is great if you only remember part of a command's name but not all of it.
+
+Giving apropos-command the .+ pattern (to match everything) yields approximately 8.000 commands that emacs knows about.
+
+The Describe System
+-------------------
+If you know what you're looking for, then describe will explain what it is. Every facet of Emacs - be it code written in elisp or the core layer written is C - is accessible and indexed through the desribe system.
 
 
+You need to memorize four describe keys as they are the most important one for day-to-day Emacs use.
+
+M-x describe-mode or C-h m
+Displays the documentation for the major mode (and any minor modes also enabled) along with any keybindings introuced by said modes. The describe command looks at your current buffer
+
+The command should be your first port of call when you're using a new major mode. You will discover a lot of Emacs's functionality this way and it is absolutely imperative that you use this command.
+
+What it doen't do is list mode-specific commands that are not bound to any key: they are simply not shown.
+
+M-x describe-function or C-h f
+Describe a function. Another command on the critical path to mastering Emacs. Knowing what something does in Emacs (and how to look it up) is useful but so is being able to jump to the part of the code where it's declared.
+
+
+M-x describe-variable or C-h v
+Describe a variable. Changing variables is not always easy to do for a beginner. Nevertheless. Being able to read up on what a variable does is.
 
 
 
