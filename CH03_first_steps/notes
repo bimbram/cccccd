@@ -1,0 +1,226 @@
+Chapter 3 - First Steps
+-----------------------
+
+Installing and Starting Emacs
+-----------------------------
+You can check Emacs's version by typing 'emacs --version' on your terminal.
+
+Always use the latest release not so much for the bug fixes but for the features and the fact that most package authors assume you're using the latest version.
+
+Emacs was made to be a cross platform but there are some trade-offs if you don't run them on Linux.
+
+Starting Emacs
+--------------
+Starting Emacs is as simple as running emacs from the command line.
+
+There's a host of command line switches you can pass to Emacs, but you only need four to get started:
+--help    display the help
+--nw      forces Emacs to run in terminal mode
+-q        do not load an init file (such as init.el)
+-Q        does not load the site-wide startup file, your init file, nor X resources
+
+If Emacs is giving you error mesages when you start it, you can use -q to prevent your init file from loading. If that fixes the errors - then you have a broken init file and should take steps to remedy that: revert to an older version, comment out code until it works.
+
+Emacs Clinet-Server
+-------------------
+If you go the server route, you cannot use the default emacs binary any more
+
+The Emacs Interface
+------------------
+If you don't see a default user interface, it's more likely due to customizations made to your init file. The quickest way to test this is to close Emacs and restart it with 'emacs -q'. If that fixes things, then it's definitely customizations made to your Emacs. Most starter kits assume you're reasonably familiar with Emacs and they often disable things like menu bar and tool bar.
+
+Keys
+----
+
+In Emacs, there are several modifier keys you can use, each with its own character:
+
+Modifier  Full Name
+C-        Control
+M-        Meta ('Alt' on most keyboards)
+S-        Shift
+
+Owing to the limitations of terminals, there are some key bindings you simply cannot type if you're running Emacs in a terminal. My advice is to run Emacs in GUI, if at all possible.
+
+complete key   : one or more keyboard sequences that invoke a command
+key sequence   : a sequence of keyboard (or mouse) actions
+prefix key     : an incomplete sequence key
+invalid        : an unrecognized key sequence 
+key maps       : sets of keys that belong to a particular prefix
+
+
+Some key bindings:
+C-x C-f               : runs a command called find-file
+C-x 8 P               : insert the paragraph symbol '¶'
+C-M-%                 : query replace regex
+TAB, F1-F12 and so on : ocasionally written like this but also in angle brackets: <tab>, <f1>
+
+
+Keeping control pressed help to maintain tempo
+
+If you're stuck, or in the unlikely event Emacs has seized up, or if you have typed in a partical command that you want me to cancel - press 'C-g', that's the universal 'bail me out' command in Emacs.
+
+Caps Lock as Control
+--------------------
+One of the most important modification you should make to your environment is rebinding your caps lock key to control. You're going to use the control key a lot and to avoid the Emacs pinky the author suggests taht we unbind the right control entirely and instead use caps lock
+
+How to change it on the terminal:
+setxkbmap -option ctrl:swapcaps
+
+M-x: Execute Extended Command
+-----------------------------
+It's common that you want to run seldom-used commands. To do this press 'M-x'. In your minibuffer, a prompt will appear and you are free to input the name of a command you wish to run.
+
+To hide the buffer type 'C-x 1'
+
+Emacs has built-in auto completion support so pressing TAB will open a new window and list all the potential candidates.
+
+For a function to be accessible to a user it must be interactive, which is an Emacs term for a function that has additional properties associated with it, rendering it usable through the execute extended command (M-x) interface and key bindings.
+
+So if you're a package author, you have to choose if a particular function is accessible to the end-user through the M-x inferface. Marking it as interactive will make it accessible to end users.
+
+If it's not interactive, you cannot run it from M-x nor can you bind it to a key.
+
+Universal Arguments
+-------------------
+Some commands have alternate states, and to access them you need to give them a universal argument (also called a prefix argument).
+
+The universal argument is also known by its key binding 'C-u'. The universal argument shorthand for the number 4.
+
+When you press a key - say the a button on your keyboard - how does Emacs write it on your screen? The truth is there's a special command called self-insert-command that, when invoked, will insert the last typed key.
+
+self-insert-command are subject to the exact same rules as all other commands. They can be unbound, rebound and otherwise modified by you.
+
+Bound to key binding 'C-0' to 'C-9' are the digit arguments. But they're bound to more than just that row of keys to maintain the 'tempo' of typing. 
+
+Key Binding          Notes
+C-u                  Digit argument 4
+C-u C-u              Digit argument 16
+C-u C-u ...          Digit argumnet 4^n
+M-0 to M-9           Digit argument 0 to 9
+C-0 to C-9           Digit argument 0 to 9
+C-M-0 to C-M-9       Digit argument 0 to 9
+C--                  Negative argument
+C--                  Negative argument
+C-M--                Negative argument
+
+
+The negative argument commands are bound to the minus key (-).
+
+
+M-- M-d
+Kills the previous word before point. Without M--, M-d would kill the world immediately following point. 
+
+
+C-- M-d
+does exactly the same but it will take you about thrice as long to type. You have to press C--, release the control key, and then press M- followd by d.
+
+A lot of people never bother working the digit negative argument into their workflow, but I find them immensely useful. Things ike changing the casing on a word I just typed are easily done by reversing the direction of a command by giving it a negative argument.
+
+Maintain your tempo and avoid moving your finger away from the home row. Negative arguments add directionality to commands; digits add repetition or change how a command works.
+
+Discovering and Remembering Keys
+If you can't remmeber the exact comamnd for something, then Emacs can help. Let's say you can't remmber how to print the paragraph character '¶', but you do remember it's somewhere in the C-x 8 key map, then all you have to do is append C-h to any prefix key to get a list of all bindings that belong to that key map.
+
+Typing C-x 8 C-h will display a computer-generated list of keys and their comamnds.
+
+Emacs will also tell you if there are more prefix key with further sub-levels; in this case, C-x 8 " has additional keys abound to it.
+
+Use Emacs's help system if you forget a particular key combination. You can always append C-h to a prefix key.
+
+Configuring Emacs
+-----------------
+It' fun (and rewarding) knowing that, if there's an aspect of your editor behavior that you don't like that you can simply change it -- indeed, a whole book could be written on the subject of changing Emacs.
+
+Use the Customize interfaxe as it's built-in and designed to be user friendly. Not everything is supported by Customize. Since you need to write elisp to change variables. Because of the data-as code paradigm LISP uses, you will find that Customize can write elisp that it's been shown how to write, and then only for specific options.
+
+The author strongly recommend use the Customize interface, where possible, until comfortable writing elisp.
+
+Write elisp to alter what you want to customize. This is the most powerful option but also the most complicated. You'll have to learn elisp (it's not too hard, and writing it is usually a lot of fun) to do this, but in the long run, it's worth doing.
+
+The Customize Interface
+-----------------------
+The Customize interface is divided into groups and sub groups. Each groups typically represent one package, mode, or piece of functionality. 
+
+To access the customize interface, type 'M-x customize'. A buffer called '*Customize Group: Emacs*' should appear with a list of groups. This is one part of Emacs where using a mouse can be beneficial; the interface has buttons, hyperlinks, and edit boxes much like a browser would.
+
+The Customize interface is made up of two things: (1) faces and options. Options are a catch-all term for things you can Customize that aren't faces.
+
+All Customizations are stored in your init file by default (or possibly a separate custom file) and like the rest of Emacs the changes are stroed as elisp code, making it possible for you to go back and manually change the elisp.
+
+Insted of navigating the tree of groups you can use one of the several shortcut commands:
+
+M-x customize
+Display the customize interface and all the groups
+
+M-x customize-browser
+Opens a tree group browser. Much like the regular Customize interface but without the group descriptions.
+
+M-x customize-customized
+customizes options and faces that you have changed but not saved. Useful if you want to tweak things.
+
+M-x customize-changed
+Display all options changed since a particular Emacs version. Good way to discover new features and options.
+
+M-x customize-face
+Promps for the name of a face to Customize. I recommend you put point on the face you want to change. It's fill in the name automatically
+
+M-x customize-group 
+Prompts for a group name (e.g. python to Customize)
+
+M-x customize-mode
+Customize the major mode your current buffer. You should do this for every major mode you use. It's a quick way to change things and gain an overview of what your major mode can do
+
+M-x customize-saved 
+Displays all your saved options and faces. Extremely handy if you want to track down and disable errant change
+
+M-x customize-themes
+Shows a list of installed themes you can switch to.
+
+Evaluating Elisp Code
+----------------------
+Frequently, you will find or write snippets of elisp code on the internet and you'll want to evaluate it - closing and restarting Emacs every time is achore.
+
+Restarting Emacs is the simplest way, which the author recommend if you have broken something in Emacs or if you want to be sure things work in a fresh environment.
+
+M-x eval-buffer
+Will evaluate the entire buffer you're in. This is what the author use to evaluate something
+
+M-x eval-region
+Evaluate just the region that you have marked.
+
+You must remember that not all tings will be re-evaluated even if you tell Emacs to.
+
+The Package Manager
+-------------------
+Since version 24, Emacs has shipped with a package manager that seamlessly displays and installs packages from centralized repositories. 
+
+Almost all packages appear on Melpa and Marmalade.  Thankfuly, the package manager will merge all the different listings into one.
+
+You can add the repositories on Emacs by adding this line of code to your init file (~/.emacs.d/init.el):
+
+startcode
+
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                          ("marmalade" . "http://marmalade-repo.org/packages/")
+                          ("melpa" . "http://melpa-stable.milkbox.net/packages/")))
+
+endcode
+
+Type 'M-x package-list-packages' and Emacs should retrieve the package listings from all three repositories above.
+
+If you know the name of the package, you can use the shortcut M-x package-install and enter the name in the minibuffer..
+
+
+Color Themes
+------------
+If you dislike the default color scheme in Emacs you can use a color theme. Type M-x customize-themes
+
+
+
+
+
+
+
+
+
+

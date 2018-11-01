@@ -123,7 +123,7 @@ Major modes in Emacs control how buffers behave. Each buffer will have a major m
 Font locking is the correct term for syntax highlighting in Emacs, and in turn is made up of faces of properties (color, font, text size, and so on) that the font locking engine use the pretty-print the text
 
 You are free to change a buffer's major mode at any time by typing the command to for another one. 
-x
+
 In addition to Emacs's register of file extentions and associated major modes, there is another system for files with ambiguous (or no) file extensions at all: Emacs will scan the first portion of the file and try to infer the major mode from that. Rarely, Emacs will get it wrong and you will need to change it.
 
 Each buffer can have just one major mode.

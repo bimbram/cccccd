@@ -1,0 +1,82 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/bimo/Desktop/projects/" . "development/")
+ ("/home/bimo/Desktop/" . "projects/")
+ ("/home/bimo/Desktop/projects/development/emacs-master/" . "CH02_the_way_of_emacs/")
+ ("/home/bimo/Desktop/projects/development/" . "IndoAntinatalis/")
+ ("/home/bimo/Desktop/projects/development/clojure-brave/CH01/clojure-noob/src/" . "clojure_noob/")
+ ("/home/bimo/Desktop/projects/development/clojure-brave/CH01/clojure-noob/" . "src/")
+ ("/home/bimo/Desktop/projects/development/clojure-brave/CH01/" . "clojure-noob/")
+ ("/home/bimo/Desktop/projects/development/clojure-brave/" . "notes/")
+ ("/home/bimo/.emacs.d/" . "customizations/")
+ ("/home/bimo/" . ".emacs.d/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/bimo/Desktop/projects/development/IndoAntinatalis/"
+ "/home/bimo/Desktop/projects/development/clojure-brave/notes/"
+ "/home/bimo/Desktop/projects/development/emacs-master/CH02_the_way_of_emacs/"
+ "/home/bimo/Desktop/projects/development/clojure-brave/CH01/clojure-noob/src/clojure_noob/"
+ "/home/bimo/Desktop/projects/development/clojure-brave/CH01/clojure-noob/"
+ "/home/bimo/.emacs.d/customizations/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "style.css"
+ "index.html"
+ "CH03"
+ "notes"
+ "core.clj"
+ "project.clj"
+ "jack-handy"
+ "ui.el"
+ "CH02_How_to_Use_Emacs_an_Excellent_Clojure_Editor"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/bimo/Desktop/projects/development/IndoAntinatalis/" (23501 58977 34544 661000) "README.md" "../" ".git/" "./" "index.html")
+
+ ("/home/bimo/Desktop/projects/development/" (23501 58562 166635 897000) "practicaljs/" "freecodecamp/" "quora/" "atom-hack/" "personal-website/" "personal_rails/" "README.md" "brad-bootstrap/" "linux-cmd/" "simple-social-network/" "nodejs/" "../" "fcc/" "emacs-master/" "content-management-system/" "css-site/" "rails-generator/" "codago/" "clojure-brave/" "./" "grd-inter/" "config-files/" "workflow-train/" "algo-colt/" "handmade-hero/" "css-tuts/" "advanced-node/" "vim-mastery/" "PersonalRails/" "rails-web/" "4clojure/" "emaily/" "css-treehouse/" "regex-practice/" "IndoAntinatalis/" "linux-mec/" "php-practitioner/" "nodemasterclass/" "brad-js/" "css-max/" "react16-webpack4-babel-scratch/" "The Node.js Master Class/" "brad-modernjs/")
+
+ ("/home/bimo/Desktop/projects/Development/" (23299 57942 421278 459000) "../" "bootstrap/" "./")
+
+ ("/home/bimo/Desktop/projects/" (23360 17246 689471 257000) "../" "DEEP READ/" "Development/" "./" "development/" "Writings/")
+
+ ("/home/bimo/Desktop/" (23475 25786 481212 382000) "codeacademy/" "edwindiaz/" "email-survey/" "../" "fb-clone/" "programming-books/" "keyboard" "backup/" "Ruby/" "personal/" "books/" "./" "projectz/" "crypto-margin/" "chrome-menkifleemblimdogmoihpfopnplikde-Default.desktop" "bimotoken/" "css3-workshop/" "nodecomplete/" ".desktop" "projects/" "crypto-margin-dev/" "emaily/" "Other/" "cssfoundation/" "reactAuth/" "Soal Codago/" "reactsocket/" "project-mangement-system/" "rubitest/" "book/" "Untitled Folder 2/" "Codago_/" "maximilian/" "Untitled Folder/" "steam.desktop")
+
+ ("/home/bimo/" (23501 55152 144220 502000) "pahit tentang eksistensi.odt" "Fitria Umami" ".gnupg/" "..profile.swp" "The/" ".zlogin" "kosmik.odt" ".gconf/" ".sqlite_history" ".v8flags.4.5.103.35.c72444a1b9678e55273d5d5f315a6c0e.json" "Downloads/" "murahan" "Apa_ide_filosofis_paling_menakutkan_yang_pernah_kamu_dengar?.odt" "Saat membayangkan \"Tuhan\", apa yang ada di benakmu?" ".config/" ".vscode/" "CH05 - The Duty to Relieve Suffering" "Why People Die By Suicide" ".macromedia/" ".steampath" ".pki/" "Apakah menurut kalian Tuhan itu ada?" ".node_repl_history" "jpl201309.pdf" ".lein/" ".ssh/" "CH03 - Don't Feel Their Pain, Label It" "CH013 - The Undermining of Do-Gooders, Part Three" ".3T/" "Desktop/" "CH14 - Things Fall Apart: The American Experiment at Risk" "CH15 - Something Quite Different From Life" ".rstudio-desktop/" "psikologi menarik.odt" ".sudo_as_admin_successful" ".xsession-errors.old" ".lantern/" ".profile" ".thunderbird/" ".gvfs/" "mengapa manusia hidup.odt" "Music/" "Templates/" "Apa itu antinatalisme?" ".mozilla/" "Apa sebenarnya yang terpenting dan utama dalam hidup manusia?" "test.ods" "CH02 - equalit" "amanda" ".dbus/" "AndroidStudioProjects/" ".atom/" "sartre" ".cache/" ".yarn/" ".viminfo.save" ".zshrc" "bin/" "CH15 - Conclusion: Decline Is a Choice" "CH" ".emacs.d-u/" "mastering/" "binar" "Ratri" "node_modules/" "snap/" "TestEnvApp2/" ".ICEauthority" "Moral Skepticism" "Mengapa banyak orang memutuskan untuk mengakhiri hidup mereka?" ".irb-history" "Android/" "CH02 - The Nightmare of Being" "CH12 - The Children of Strangers" ".mongorc.js" "The Art of Living" ".emacs.d/" "Arvidyani" ".steampid" "Masalah utama epistemologi adalah pengetahuan. Apa itu pengetahuan?" "merasa cukup.odt" ".byteexec/" "foKLS37.png" ".nixnote/" ".dbshell" "Suicide of the West/" ".AndroidStudio2.3/" "CH07 - The Humiliation of Strangers" "Calibre Library/" "movie" "Mastering/" ".psql_history" ".electron/" ".gem/" "How To Be  A Stoic" ".m2/" ".xsession-errors" ".gksu.lock" "Liberalism/" "Apa peran emosi dalam hidup kita?" "buss" "Mengapa_pernikahan_sedarah_tidak_boleh_dilakukan?.odt" "Untitled Document 1" ".mkshrc" "persoalan akhir.odt" "CH01 - Religious Perspectives" "Public/" "CH04" ".FBReader/" "CH02 - The Dimensions of Development" "emacs-24.5/" "pacarquh-2/" "CH02 emotions" "Siapakah orang yang kamu teladani? Hal apa yang kamu teladani darinya?.odt" "peterson.odt" ".audacity-data/" "CH02 - The Good" "Videos/" "emacs-24.5.tar.gz" "Matt Ridley" "Apa yang terjadi bila kita tidak pernah dilahirkan?" "CH03 - Bureaucracy" "Drive: The Surprising Truth About What Motivates Us" "aborsi" "ubuntu-shortcut" "CH10 - Kidneys" ".viminfo" "CH01 - Preliminaries" "Apa emosi terburuk yang bisa dirasakan seseorang dan mengapa?" "The Personal MBA/" ".bashrc" "CH01 - What Is Political Development" "R/" ".node-gyp/" "CH01 - The Complexity of Emotions" ".mplayer/" ".nvm/" "Fukuyama/" "jordan peterson" ".yarnrc" ".local/" ".mysql_history" ".bash_history" ".bash_profile" ".pypar2/" ".babel.json" "CH05 - Trigger the Two Words that Immediately Transform Any Negotioation" "The Mating Mind" "CH02 - The Dimensions of Development (exp)" "test" "Money: Vintage Minis" ".Xauthority" ".lesshst" ".gphoto/" ".adobe/" ".gnome2_private/" "Frick_gsas.harvard.inactive_0084L_11842.pdf" "Clara Sovia Lestari" ".gitconfig" "Mengapa saya harus hidup?" "CH04 - Literary Perspective" ".gnome/" "The Philosophy of Schopenhauer" "Documents/" ".vimrc" "CH09 - One of Those God Things" "pizza-translator/" ".bundle/" ".spacemacs" ".Genymobile/" "The Ultimate Question (ina)" ".rvm/" "CH14 - From the Point of View of the Universe" "Youtube" ".pgadmin3" ".wget-hsts" ".java/" "kecenderungan untuk tidak menyenangi seks orang tersebut akan sulit untuk diteruskan" "ice_screenshot_20180627-123629.png" ".emulator_console_auth_token" ".compiz/" "89620c1836f8ede6e7e273175955085e.jpg" "makna" ".Rhistory" ".oracle_jre_usage/" ".expo/" "The Ultimate Question" ".steam/" "CH06 - An Accidental Capability Produced, In Its Boundless Stupidity, By A Biological Process That Is Normally Opposed To The Expression of Such A Capability" ".swp" "Pro-Death (Pro-Kematian)." ".android/" "21Lessons" "insecurity" ".mysql/" "A Significant Life" ".gradle/" "CH08 - The Legacy of Drunks" ".pgpass" "Mengapa orang-orang begitu baik?" "Sapiens/" ".bash_logout" ".vim/" ".nano/" "pacarquh-new/" ".npm/" ".dmrc" "Pictures/" ".v8flags.6.1.534.50.c72444a1b9678e55273d5d5f315a6c0e.json" ".netrc" ".rnd" ".pgadmin_histoqueries" "CH16 - National Output" ".wine/" "CH11 - Please Reply To Me As Soon As Possible" ".gnome2/" "../" "./")
+
+ ("/home/bimo/Desktop/projects/development/clojure-brave/notes/" (23500 3533 530521 126000) "../" "CH03" "CH01_Building_Running_and_the_REPL" "./" "CH02_How_to_Use_Emacs_an_Excellent_Clojure_Editor" "CH00_introduction" "jack-handy" "CH00_foreword")
+
+ ("/home/bimo/Desktop/projects/development/emacs-master/CH02_the_way_of_emacs/" (23499 28825 518452 995000) "../" "./")
+
+ ("/home/bimo/Desktop/projects/development/emacs-master/" (23499 28825 522453 156000) "README.md" "../" ".git/" "./" "CH02_the_way_of_emacs/")
+
+ ("/home/bimo/Desktop/projects/development/clojure-brave/CH01/clojure-noob/" (23499 20817 761783 620000) ".hgignore" "README.md" "project.clj" "src/" "../" "CHANGELOG.md" "./" "LICENSE" ".gitignore" "target/" "resources/" ".lein-repl-history" "test/" "doc/")
+
+ ("/home/bimo/.emacs.d/" (23499 13506 278286 378000) "ido.last" "README.md" "elpa/" "init.el" ".recentf" "../" "themes/" "./" "backups/" ".gitignore" "customizations/" ".smex-items" "places" "projectile-bookmarks.eld" "auto-save-list/")
+
+ ("/home/bimo/Desktop/projects/development/clojure-brave/CH02/" (23497 25415 17945 507000) "../" "./")
+
+ ("/home/bimo/Desktop/projects/development/clojure-brave/CH01/clojure-noob/src/clojure_noob/" (23497 24638 740835 932000) "../" "./" "core.clj")
+
+ ("/home/bimo/Desktop/projects/development/clojure-brave/CH01/clojure-noob/src/" (23497 24638 740835 932000) "../" "./" "clojure_noob/")
+
+ ("/home/bimo/Desktop/projects/development/clojure-brave/CH01/" (23497 24638 736835 902000) "../" "clojure-noob/" "./")
+
+ ("/home/bimo/Desktop/projects/development/clojure-brave/" (23497 25415 17945 507000) "README.md" "notes/" "../" ".git/" "./" "CH02/" "CH01/")
+
+ ("/home/bimo/.emacs.d/customizations/" (23497 29500 273395 147000) "ui.el" "../" "elisp-editing.el" "shell-integration.el" "./" "misc.el" "setup-clojure.el" "editing.el" "setup-js.el" "navigation.el")
+
+ ("/home/bimo/.emacs.d-u/" (23468 16928 355662 363000) "assets/" "layers/" "README.md" "elpa/" "init.el" "../" ".cache/" "CONTRIBUTING.org" "spacemacs.mk" "core/" ".travis.yml" ".git/" "private/" "./" ".projectile" ".gitignore" ".travis-build.sh" "news/" ".github/" "COMMUNITY.org" "doc/" "session.108cde1bfb3fa59670153800975210935100000035360055" "tests/" "CHANGELOG.org")
+
+ ("/home/" (22915 60497 471586 884000) "../" "./" "bimo/")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
